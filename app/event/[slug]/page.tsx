@@ -1,4 +1,4 @@
-import { getEvent } from '../../../lib/actions.ts'
+import { getEvent } from '../../../lib/actions'
 
 interface PageParams {
     slug: string

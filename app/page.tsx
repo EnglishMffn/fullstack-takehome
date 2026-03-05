@@ -1,5 +1,5 @@
-import { getAllEvents } from '../lib/actions.ts'
-import EventList from './event-list.tsx'
+import { getAllEvents } from '../lib/actions'
+import EventList from './event-list'
 
 export const Page = async (
     { searchParams }: { searchParams: Promise<{ edit?: string }> },
