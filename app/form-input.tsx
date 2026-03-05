@@ -11,7 +11,7 @@ interface FormInput {
     required?: boolean
     children?: ReactNode
     hasErrors?: boolean
-    InputComponent?: (props: FormInput) => ReactNode
+    InputComponent?: (props: Partial<FormInput>) => ReactNode
 }
 
 const TextInputComponent = ({ name, hasErrors, type, pending, defaultValue }: Partial<FormInput>) => (
