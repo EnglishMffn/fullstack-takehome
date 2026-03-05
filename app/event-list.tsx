@@ -1,13 +1,13 @@
 'use client'
 
 import { useActionState, useOptimistic, useRef, useTransition } from 'react'
-import { EventResponse, EventSchema, ValidColors } from '../lib/schemas.ts'
-import { createEvent, deleteEvent, FormState, updateEvent } from '../lib/actions.ts'
-import { cleanFormData } from '../lib/utils.ts'
+import { EventResponse, EventSchema, ValidColors } from '../lib/schemas'
+import { createEvent, deleteEvent, FormState, updateEvent } from '../lib/actions'
+import { cleanFormData } from '../lib/utils'
 import { flattenError } from 'zod'
 import clsx from 'clsx'
 import Link from 'next/link'
-import { FormInput } from './form-input.tsx'
+import { FormInput } from './form-input'
 
 type Pending = { pending?: boolean }
 type PendingEvent = Event & Pending
@@ -44,8 +44,6 @@ interface EventListProps {
 }
 
 const initialState: FormState = { message: '', errors: {}, values: {} }
-
-type FormEditState = 'edit' | 'add'
 
 export const EventList = (
     { initialItems = [], editingEvent }: EventListProps,
