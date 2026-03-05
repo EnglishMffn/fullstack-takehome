@@ -22,7 +22,7 @@ export const getEvent = async (eventId: string): Promise<EventResponse> => {
   const response = await fetch(
     `https://rf-json-server.herokuapp.com/events/${eventId}`
   );
-  s;
+
   if (!response.ok) {
     notFound();
   }
